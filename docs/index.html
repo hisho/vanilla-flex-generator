@@ -4,6 +4,7 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
   <meta charset="utf-8">
   <title>flexboxGridGenerator</title>
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
@@ -13,6 +14,9 @@
   <meta property="og:url" content="https://hishohub.github.io/grid-generator/">
   <meta property="og:site_name" content="flexboxGridGenerator">
   <meta property="og:description" content="flexboxでgridのgapを再現するジェネレーター">
+  <link href="//fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+  <script src="//cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <link rel="stylesheet" href="//jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night-eighties.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script type="application/ld+json">
     {
@@ -26,9 +30,35 @@
       }]
     }
   </script>
+  <style>
+  </style>
 </head>
 
 <body>
+  <section class="main">
+    <h1 class="main__title">flexboxGridGenerator</h1>
+    <section class="main__container">
+      <h2 class="main__heading">リザルト</h2>
+      <div class="main__inner"></div>
+    </section>
+    <section class="main__container">
+      <h2 class="main__heading">入力欄</h2>
+      <div class="main__inner"></div>
+    </section>
+    <section class="main__container">
+        <h2 class="main__heading">SourceCode</h2>
+        <div class="main__inner code">
+          <pre class="code__container">
+            <code class="code__inner prettyprint lang-html linenums" id="html" data-lang="html"></code>
+          </pre>
+          <pre class="code__container">
+            <code class="code__inner prettyprint lang-css linenums" id="css" data-lang="css">.elem {
+  font-size: 16px;
+}</code>
+        </pre>
+      </div>
+    </section>
+  </section>
   <script src="assets/js/main.js" async></script>
 </body>
 
