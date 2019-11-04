@@ -3,6 +3,7 @@
   margin: 0;
   font: inherit;
   word-wrap: inherit;
+  font-feature-settings: inherit;
 }
 
 *,::before,::after {
@@ -11,9 +12,21 @@
 
 html {
   overflow-x: hidden;
+  font-family: 'Source Serif Pro', serif;
   font-size: 62.5%;
+  line-height: 1;
+  letter-spacing: .05em ;
   word-wrap: break-word;
   font-feature-settings: "palt";
+}
+
+p {
+  line-height: 1.6;
+}
+
+body {
+  min-height: 100vh;
+  background: #f9ffff;
 }
 
 ul,
@@ -31,6 +44,7 @@ textarea {
 
 input {
   background: transparent;
+  border: 0;
   border-radius: 0;
 }
 
@@ -54,3 +68,28 @@ select {
 select::-ms-expand {
   display: none;
 }
+
+.main {
+  max-width: 1010px;
+  padding: 15px;
+  margin: 5% auto 0;
+  background: #fff4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  &__title {
+    font-size: 5rem;
+  }
+  &__heading {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+  }
+  &__container {
+    margin-top: 5%;
+  }
+  &__inner {
+    margin-top: 3%;
+  }
+}
+
+@import "./modules/**/*.scss"

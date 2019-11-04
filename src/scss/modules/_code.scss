@@ -1,0 +1,46 @@
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L4,
+li.L5,
+li.L6,
+li.L7,
+li.L8,
+li.L9 {
+  list-style-position: inside;
+}
+
+.code {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  font-feature-settings: normal;
+  &__container {
+    display: flex;
+    width: calc(50% - 10px);
+    margin-left: 10px;
+    overflow-y: auto;
+    background: #2d2d2d;
+  }
+  &__inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 2em 1em 1em;
+    font-size: 1.6rem;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: .2em .5em;
+      font-size: 1.6rem;
+      color: #2d2d2d;
+      content: attr(data-lang);
+      background: #a9cc51;
+    }
+  }
+}
