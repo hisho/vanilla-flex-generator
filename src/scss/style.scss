@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  word-wrap: inherit;
+}
+
+*,::before,::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 62.5%;
+  word-wrap: break-word;
+  font-feature-settings: "palt";
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-size: 16px;
+}
+
+input {
+  background: transparent;
+  border-radius: 0;
+}
+
+button,
+select {
+  text-transform: none;
+  border-style: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+select {
+  background-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
