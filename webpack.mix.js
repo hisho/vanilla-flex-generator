@@ -24,7 +24,7 @@ mix.sass(`src/scss/style.scss`, `${dist}css`)
   })
   .sourceMaps()
 
-mix.js(`src/js/main.js`, `${dist}js`).sourceMaps();
+mix.ts(`src/js/main.ts`, `${dist}js`);
 
 mix.webpackConfig({
   module: {
