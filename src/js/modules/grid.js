@@ -1,32 +1,46 @@
 export default function constructor() {
   let CurrentColValue = col.value;
-  col.addEventListener(`change`, (e) => {
-    CurrentColValue = e.target.value;
+  let CurrentRowGapValue = rowgap.value;
+  let CurrentColumnGapValue = columngap.value;
+  col.addEventListener(`change`, e => {
+    CurrentColValue = e.currentTarget.value;
+    test(CurrentColValue, CurrentRowGapValue, CurrentColumnGapValue);
+    return CurrentColValue;
   });
-  test()
+  rowgap.addEventListener(`change`, e => {
+    CurrentRowGapValue = e.currentTarget.value;
+    test(CurrentColValue, CurrentRowGapValue, CurrentColumnGapValue);
+    return CurrentRowGapValue;
+  });
+  columngap.addEventListener(`change`, e => {
+    CurrentColumnGapValue = e.currentTarget.value;
+    test(CurrentColValue, CurrentRowGapValue, CurrentColumnGapValue);
+    return CurrentColumnGapValue;
+  });
+  test(CurrentColValue, CurrentRowGapValue, CurrentColumnGapValue);
 }
 
-
 const col = document.getElementById(`col`);
-
-
 const rowgap = document.getElementById(`rowgap`);
 const columngap = document.getElementById(`columngap`);
 const row = document.getElementById(`row`);
 const css = document.getElementById(`css`);
-const html = document.getElementById(`html`);
 
 const styleElement = document.getElementById(`style`);
-const test = () => {
-  styleElement.innerHTML =
-`.row {
+const test = (col, rowGap, columnGap) => {
+  styleElement.innerHTML = `.row {
   display: flex;
   flex-wrap: wrap;
+  margin-top: -${Number(rowGap)}px;
+  margin-left: -${Number(columnGap)}px;
 }
 
 .col {
-  width: ${(1/3)*100}%
+  margin-top: ${Number(rowGap)}px;
+  margin-left: ${Number(columnGap)}px;
+  width: calc(${(1 / Number(col)) * 100}% - ${Number(columnGap)}px);
 }
 `;
-  css.innerHTML = styleElement.innerHTML;
-}
+  css.innerHTML = PR.prettyPrintOne(styleElement.innerHTML);
+};
+const range = size => [...Array(size).keys()];
