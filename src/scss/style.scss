@@ -93,4 +93,9 @@ select::-ms-expand {
   }
 }
 
+.grid {
+  height: 200px;
+  overflow-y: auto;
+}
+
 @import "./modules/**/*.scss";
