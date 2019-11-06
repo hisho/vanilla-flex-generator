@@ -8,7 +8,8 @@ li.L6,
 li.L7,
 li.L8,
 li.L9 {
-  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 2.5em;
 }
 
 .code {
@@ -19,6 +20,7 @@ li.L9 {
   &__container {
     display: flex;
     width: calc(50% - 10px);
+    height: 208px;
     margin-left: 10px;
     overflow-y: auto;
     background: #2d2d2d;
@@ -28,6 +30,7 @@ li.L9 {
     display: block;
     width: 100%;
     padding: 2em 1em 1em;
+    overflow-y: auto;
     font-size: 1.6rem;
     &::before {
       position: absolute;
