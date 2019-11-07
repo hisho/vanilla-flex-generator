@@ -24,8 +24,6 @@ mix.sass(`src/scss/style.scss`, `${dist}css`)
   })
   .sourceMaps()
 
-mix.js(`src/js/main.js`, `${dist}js`);
-
 mix.webpackConfig({
   module: {
     rules: [{
@@ -40,6 +38,9 @@ mix.webpackConfig({
   ]
 })
 
+mix.js(`src/js/main.js`, `${dist}js`);
+
+mix.copyDirectory(`src/img`, `${dist}img`);
 
 mix.webpackConfig({
   devtool: "inline-source-map"
