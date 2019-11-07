@@ -38,9 +38,10 @@ const test = (col, rowGap, columnGap) => {
 .col {
   margin-top: ${Number(rowGap)}px;
   margin-left: ${Number(columnGap)}px;
-  width: calc(${(1 / Number(col)) * 100}% - ${Number(columnGap)}px);
+  width: calc(${orgFloor((1 / Number(col)) * 100)}% - ${Number(columnGap)}px);
 }
 `;
   css.innerHTML = PR.prettyPrintOne(styleElement.innerHTML);
 };
+const orgFloor = number => Math.floor(number * 1e4) / 1e4;
 const range = size => [...Array(size).keys()];
