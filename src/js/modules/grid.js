@@ -23,7 +23,6 @@ export default function constructor() {
 const col = document.getElementById(`col`);
 const rowgap = document.getElementById(`rowgap`);
 const columngap = document.getElementById(`columngap`);
-const row = document.getElementById(`row`);
 const css = document.getElementById(`css`);
 
 const styleElement = document.getElementById(`style`);
@@ -44,4 +43,3 @@ const test = (col, rowGap, columnGap) => {
   css.innerHTML = PR.prettyPrintOne(styleElement.innerHTML);
 };
 const orgFloor = number => Math.floor(number * 1e4) / 1e4;
-const range = size => [...Array(size).keys()];
