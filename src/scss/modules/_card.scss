@@ -1,9 +1,10 @@
 .card {
   display: flex;
   flex-direction: column;
+  height: 100%;
   padding: 10px;
   text-align: center;
-  background: #fafafa;
+  background: rgba(purple,.05);
   border: 1px solid #ccc;
   &__title {
     order: 2;
@@ -15,6 +16,7 @@
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 1.6rem;
+    text-align: left;
   }
   &__button {
     position: relative;
@@ -41,7 +43,7 @@
   &__img {
     order: 1;
     height: 0;
-    padding-top: percentage(9/16);
+    padding-top: percentage(3/4);
     margin: -10px -10px 0;
     background-position: center center;
     background-size: cover;
