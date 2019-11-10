@@ -16,7 +16,7 @@ $ npm run watch
 or
 
 ```node
-$ npm strt
+$ npm start
 ```
 
 ### TODO
