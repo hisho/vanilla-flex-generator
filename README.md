@@ -12,3 +12,13 @@ $ npm ci
 ```node
 $ npm run watch
 ```
+
+or
+
+```node
+$ npm strt
+```
+
+### TODO
+* JSリファクタリング
+* レスポンシブ対応
