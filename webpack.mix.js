@@ -41,6 +41,7 @@ mix.webpackConfig({
 mix.js(`src/js/main.js`, `${dist}js`);
 
 mix.copyDirectory(`src/img`, `${dist}img`);
+mix.copy(`src/index.html`, `docs/`);
 
 mix.webpackConfig({
   devtool: "inline-source-map"
